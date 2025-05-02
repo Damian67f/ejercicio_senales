@@ -12,7 +12,7 @@ func _ready():
 
 
 func _on_red_generator_button_down() -> void:
-	$RedGenerator._generate_block()	
+	$RedGenerator._generate_block()		
 	print("funciona")
 
 
@@ -22,3 +22,7 @@ func _on_red_generator_button_down() -> void:
 func _on_violet_generator_button_down() -> void:
 	$VioletGenerator._generate_block()
 	print("funciona")
+
+
+func _on_reset_button_down() -> void:
+	get_tree().call_group("block","_delete()")
