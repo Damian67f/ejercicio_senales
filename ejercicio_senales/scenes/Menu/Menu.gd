@@ -12,11 +12,13 @@ func _ready():
 
 
 func _on_red_generator_button_down() -> void:
-	pass # Replace with function body.
+	$RedGenerator._generate_block()	
+	print("funciona")
 
 
 
 
 
 func _on_violet_generator_button_down() -> void:
-	pass # Replace with function body.
+	$VioletGenerator._generate_block()
+	print("funciona")
