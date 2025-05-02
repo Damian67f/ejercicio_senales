@@ -36,3 +36,7 @@ func _on_reset_button_down() -> void:
 func _count_new_instance():
 	instancesCount += 1
 	$CountLabel.text = str(instancesCount)
+	
+func _delete():
+	instancesCount = 0
+	$CountLabel.text = "Cantidad de Instancias:"
