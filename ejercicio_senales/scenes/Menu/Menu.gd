@@ -1,8 +1,9 @@
 extends Node2D
 
+
 const INSTANCES_TEXT = "Cantidad de instancias: "
 # Variable para contar cantidad de instancias
-var instancesCount = 0
+var instancesCount:int = 0
 
 func _ready():
 	# Inicializa el texto de "CountLabel" usando el texto
@@ -26,3 +27,8 @@ func _on_violet_generator_button_down() -> void:
 
 func _on_reset_button_down() -> void:
 	get_tree().call_group("block","_delete()")
+	
+	
+func _count_new_instance():
+	instancesCount += 1
+	$CountLabel.text = str(instancesCount)
