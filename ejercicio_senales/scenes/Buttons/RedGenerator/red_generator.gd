@@ -4,7 +4,7 @@ extends TextureButton
 
 func _generate_block():
 	var NuevaInstancia = Instancia.instantiate()
-	return NuevaInstancia
+	add_child(NuevaInstancia)
 
 
 
